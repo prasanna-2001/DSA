@@ -1,0 +1,17 @@
+1.  Selection sort
+2.  Insertion Sort
+3.  Merge sort
+4.  Quick sort
+5.  Radix 
+6.  BFS and DFS
+7.  Topological Sorting
+8.  Binary Search
+9.  String Matching Algorithms
+10. Two Pointer Technique
+11. Kadane Algorithm
+12. Binary Search Tree all questions
+
+
+IMPP
+
+14. Internal Working of HashMap
