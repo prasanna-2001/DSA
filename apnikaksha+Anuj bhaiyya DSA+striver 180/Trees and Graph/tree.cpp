@@ -13,7 +13,31 @@ class node{
         }
 };
 
-void levelOrderTraversal(node* &root){
+void levelOrderTraversal(node* root){
+    // if(root==NULL){
+    //     return;
+    // }
+    // queue<node*> q;
+    // q.push(root);
+    // q.push(NULL);
+    // while(!q.empty()){
+    //     node* x = q.front();
+    //     q.pop();
+    //     if(x != NULL){
+    //         cout<<x->data<<" ";
+    //         if(x->left){
+    //             q.push(x->left);
+    //         }
+    //         if(x->right){
+    //             q.push(x->right);
+    //         }
+
+    //     }
+    //     else if(!q.empty()){
+    //             q.push(NULL);            
+    //     }
+
+    // }
     if(root==NULL){
         return;
     }
@@ -21,23 +45,21 @@ void levelOrderTraversal(node* &root){
     q.push(root);
     q.push(NULL);
     while(!q.empty()){
-        node* x = q.front();
+        node* frnt = q.front();
         q.pop();
-        if(x != NULL){
-            cout<<x->data<<" ";
-            if(x->left){
-                q.push(x->left);
+        if(frnt!=NULL){
+            cout<<frnt->data<<" ";
+            if(frnt->left){
+                q.push(frnt->left);
             }
-            if(x->right){
-                q.push(x->right);
+            if(frnt->right){
+                q.push(frnt->right);
             }
-
         }
-        else if(!q.empty()){
-                q.push(NULL);            
+        else if(frnt==NULL&& !q.empty()){
+            q.push(NULL);
         }
-
-    }
+    } 
 }
 
 
@@ -68,9 +90,24 @@ int sumatK(node*root,int k){
                 q.push(NULL);   
                 level++;         
         }
+        
 
     }
     return sum;
+}
+
+int noofall(node* root){
+    if(root=NULL){
+        return 0;
+    }
+    return noofall(root->left) + noofall(root->right) + 1;
+}
+
+int sumall(node* root){
+    if(root=NULL){
+        return 0;
+    }
+    return sumall(root->left) + sumall(root->right) + root->data;
 }
 
 int main(){
@@ -84,20 +121,9 @@ int main(){
    p1->left=new node(43);
    p2->left=new node(42);
    p2->right=new node(47);
-//    cout<<root->left->right->data;
-
-
-
-//    cout<<root->data<<endl;
-//    cout<<root->left->data<<endl;
-//    cout<<root->right->data<<endl;
-//    cout<<root->left->left->data<<endl;
-//    cout<<root->left->right->data<<endl;
-//    cout<<root->right->left->data<<endl;
-//    cout<<root->right->left->data<<endl;
-
-   levelOrderTraversal(root);
-   int sumat = sumatK(root,2);
-   cout<<sumat<<"is the sum"<<endl;
+//    cout<<noofall(root);
+cout<<sumall(root);
+// cout<<sumatK(root,1);
+//    levelOrderTraversal(root);
 
 }
