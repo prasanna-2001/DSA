@@ -56,7 +56,7 @@ void levelOrderTraversal(node* root){
                 q.push(frnt->right);
             }
         }
-        else if(frnt==NULL&& !q.empty()){
+        else if(!q.empty()){
             q.push(NULL);
         }
     } 
