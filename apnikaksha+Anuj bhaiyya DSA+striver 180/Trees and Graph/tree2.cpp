@@ -13,36 +13,36 @@ class Node{
         }
 };
 
-// void levelOrderTraversal(Node* root){
-//     int k=0;
-//     if(root==NULL){
-//         return;
-//     }
-//     queue<Node*> q;
-//     q.push(root);
-//     q.push(NULL);
+void levelOrderTraversal(Node* root){
+    int k=0;
+    if(root==NULL){
+        return;
+    }
+    queue<Node*> q;
+    q.push(root);
+    q.push(NULL);
 
-//     while(!q.empty()){
-//         Node* nd = q.front(); //yaha node typ ka vaiable bana rahe hai nayi node nhi bana rahe hai so new keyword use nhikarna
-//         q.pop();
-//         if(nd != NULL){
-//             cout<<nd->data<<" ";
-//             if(nd->left){
-//                 q.push(nd->left);
-//             }
-//             if(nd->right){
-//                 q.push(nd->right);
-//             }
-//         }
-//         else{
-//             if(!q.empty()){
-//                 k++;
-//                 q.push(NULL);
-//             }
-//         }
-//     }
-//     cout<<"\n"<<k+1<<" ";
-// }
+    while(!q.empty()){
+        Node* nd = q.front(); //yaha node typ ka vaiable bana rahe hai nayi node nhi bana rahe hai so new keyword use nhikarna
+        q.pop();
+        if(nd != NULL){
+            cout<<nd->data<<" ";
+            if(nd->left){
+                q.push(nd->left);
+            }
+            if(nd->right){
+                q.push(nd->right);
+            }
+        }
+        else{
+            if(!q.empty()){
+                k++;
+                q.push(NULL);
+            }
+        }
+    }
+    cout<<"\n"<<k+1<<" ";
+}
 
 
 //o(n) tc abnd sc = o(height)

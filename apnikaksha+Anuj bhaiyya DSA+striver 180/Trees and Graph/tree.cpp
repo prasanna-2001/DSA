@@ -14,30 +14,7 @@ class node{
 };
 
 void levelOrderTraversal(node* root){
-    // if(root==NULL){
-    //     return;
-    // }
-    // queue<node*> q;
-    // q.push(root);
-    // q.push(NULL);
-    // while(!q.empty()){
-    //     node* x = q.front();
-    //     q.pop();
-    //     if(x != NULL){
-    //         cout<<x->data<<" ";
-    //         if(x->left){
-    //             q.push(x->left);
-    //         }
-    //         if(x->right){
-    //             q.push(x->right);
-    //         }
-
-    //     }
-    //     else if(!q.empty()){
-    //             q.push(NULL);            
-    //     }
-
-    // }
+    
     if(root==NULL){
         return;
     }
