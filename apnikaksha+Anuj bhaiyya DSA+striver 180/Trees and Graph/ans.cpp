@@ -13,7 +13,29 @@ class Node{
         }
 };
 
+bool isIdentical(Node *r1, Node *r2){
+  if(r1==NULL && R2==NULL){
+    return true;
+  }
+  if(r1==NULL && r2!=NULL){
+    return false;
+  }
+  if(r1!=NULL && r2==NULL){
+    return false;
+  }
 
+  bool left = isIdentical(r1->left, r2->left);
+  bool right = isIdentical(r1->right, r2->right);
+  bool nowValue= r1->data==r2->data;
+
+  if(left && right && nowValue){
+    return true;
+  }
+  else{
+    return false;
+  }
+
+}
  
 int main(){
   Node* root= new Node(73);
@@ -30,8 +52,8 @@ int main(){
   p1->left->right=new Node(654);
 
 
-//   p2->left=new Node(33);
-//   p2->right=new Node(10);
+  p2->left=new Node(33);
+  p2->right=new Node(10);
     // cout<<heightofbt(root);
   // vector<int> v = inorderTraversal(root);   
   // for(int i=0;i<v.size();i++){
