@@ -200,6 +200,7 @@ int main()
     };
     cout<<"The game till now is given as follows\n";
     Move bestMove = findBestMove(board);
+    // Move 
     for(int i=0;i<3;i++){
         for(int j=0;j<3;j++){
              cout<<board[i][j]<<"\t";
