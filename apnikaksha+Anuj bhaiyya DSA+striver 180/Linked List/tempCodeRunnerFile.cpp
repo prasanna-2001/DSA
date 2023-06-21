@@ -1,2 +1,0 @@
-reverseIterative(head);
-  display(head);
